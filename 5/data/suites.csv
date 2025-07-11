@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","0","Баг с увеличением количества товара определенного цвета","chromium","Fri Jul 11 14:42:09 GMT 2025","skipped","Fri Jul 11 14:42:09 GMT 2025","","bugs.spec.js","",""
+"","3922","Баг с размером изображения в карточке товара","chromium","Fri Jul 11 14:41:35 GMT 2025","passed","Fri Jul 11 14:41:39 GMT 2025","","bugs.spec.js","",""
+"","3879","Баг с некорректным описанием товара","chromium","Fri Jul 11 14:42:05 GMT 2025","passed","Fri Jul 11 14:42:09 GMT 2025","","bugs.spec.js","",""
+"","11439","Баг с изменением количества товаров на странице","chromium","Fri Jul 11 14:41:41 GMT 2025","passed","Fri Jul 11 14:41:53 GMT 2025","","bugs.spec.js","",""
+"","12507","Баг с отправкой комментария в карточке товара","chromium","Fri Jul 11 14:41:53 GMT 2025","passed","Fri Jul 11 14:42:05 GMT 2025","","bugs.spec.js","",""
+"","5212","Баг с фильтрацией по цене","chromium","Fri Jul 11 14:42:09 GMT 2025","passed","Fri Jul 11 14:42:14 GMT 2025","","bugs.spec.js","",""
