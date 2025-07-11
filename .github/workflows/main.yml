@@ -1,0 +1,27 @@
+name: e2e playwright
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  e2e:
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          
+      - name: install npm package
+        run: npm i
+        
+      - name: install pw
+        run: npx playwright install --with-deps
+        
+      - name: test
+        run: npm run test
