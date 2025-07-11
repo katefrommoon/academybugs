@@ -8,8 +8,9 @@ export class ProductPage {
     this.emailField = page.getByRole('textbox', { name: 'Email*' });
     this.postButton = page.getByRole('button', { name: 'Post Comment' });
     this.description = page.locator('.ec_details_description.academy-bug');
-    //this.colorButton = page.locator('img[title="Green"]');
-    //this.plusButton = page.locator('input.ec_plus').waitFor({ state: 'visible' });
+    this.colorButton = page.locator('img[title="Green"]');
+    //this.plusButton = page.locator('input.ec_plus');
+    this.plusButton = page.getByRole('button', { name: '+' })
     this.priceButton = page.getByRole('link', { name: '$15.00 - $19.99' })
   }
   async createComment() {
@@ -33,11 +34,11 @@ export class ProductPage {
       await this.colorButton.click();
     });
   }
-  /* async increaseQuantity() {
+  async increaseQuantity() {
     return test.step("Увеличить количество товара", async () => {
       await this.plusButton.click({ force: true });
     });
-  } */
+  }
   async filterByPrice() {
     return test.step("Увеличить количество товара", async () => {
       await this.priceButton.click({ force: true });

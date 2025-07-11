@@ -10,7 +10,9 @@ test("Баг с размером изображения в карточке то
   await app.bugModal.clickSubmit();
   await app.bugModal.clickViewReport();
 
-  await expect(app.bugModal.title).toBeVisible();
+  return test.step('Появление модалки "#1 Awesome! You found a bug."', async () => {
+    await expect(app.bugModal.title).toBeVisible();
+  });
 });
 
 test("Баг с изменением количества товаров на странице", async ({ page }) => {
@@ -22,7 +24,9 @@ test("Баг с изменением количества товаров на с
   await app.bugModal.clickSubmit();
   await app.bugModal.clickViewReport();
 
-  await expect(app.bugModal.title).toBeVisible();
+  return test.step('Появление модалки "#1 Awesome! You found a bug."', async () => {
+    await expect(app.bugModal.title).toBeVisible();
+  });
 });
 
 test("Баг с отправкой комментария в карточке товара", async ({ page }) => {
@@ -35,7 +39,9 @@ test("Баг с отправкой комментария в карточке т
   await app.bugModal.clickSubmit();
   await app.bugModal.clickViewReport();
 
-  await expect(app.bugModal.title).toBeVisible();
+  return test.step('Появление модалки "#1 Awesome! You found a bug."', async () => {
+    await expect(app.bugModal.title).toBeVisible();
+  });
 });
 
 test("Баг с некорректным описанием товара", async ({ page }) => {
@@ -48,19 +54,24 @@ test("Баг с некорректным описанием товара", async
   await app.bugModal.clickSubmit();
   await app.bugModal.clickViewReport();
 
-  await expect(app.bugModal.title).toBeVisible();
+  return test.step('Появление модалки "#1 Awesome! You found a bug."', async () => {
+    await expect(app.bugModal.title).toBeVisible();
+  });
 });
 
-/* Тест не рабочий - не нажимается плюс в карточке товара
-  test("Баг с увеличением количества товара определенного цвета", async ({ page }) => {
+test.skip("Баг с увеличением количества товара определенного цвета", async ({
+  page,
+}) => {
   let app = new App(page);
   await app.main.open();
   await app.main.clickCard("3981370");
   await app.productPage.chooseColor();
   await app.productPage.increaseQuantity();
 
-  await expect(app.bugModal.title).toBeVisible();
-}); */
+  return test.step('Появление модалки "#1 Awesome! You found a bug."', async () => {
+    await expect(app.bugModal.title).toBeVisible();
+  });
+});
 
 test("Баг с фильтрацией по цене", async ({ page }) => {
   let app = new App(page);
@@ -72,5 +83,7 @@ test("Баг с фильтрацией по цене", async ({ page }) => {
   await app.bugModal.clickSubmit();
   await app.bugModal.clickViewReport();
 
-  await expect(app.bugModal.title).toBeVisible();
+  return test.step('Появление модалки "#1 Awesome! You found a bug."', async () => {
+    await expect(app.bugModal.title).toBeVisible();
+  });
 });
